@@ -1,17 +1,12 @@
 import React from 'react';
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { Link, Tabs } from 'expo-router';
-import { Pressable, View } from 'react-native';
-
-import Colors from '@/constants/Colors';
-import { useColorScheme } from '@/components/useColorScheme';
+import { Tabs } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { TabBarIcon } from '@/components/tabBarIcon';
 
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
+  // const colorScheme = useColorScheme();
 
   return (
     <SafeAreaProvider style={{ flex: 1 }}>
@@ -24,9 +19,6 @@ export default function TabLayout() {
           name="index"
           options={{
             title: 'Menu',
-            // tabBarItemStyle: {
-            //   backgroundColor: "#EB3030"
-            // },
             tabBarActiveTintColor: "#EB3030",
             tabBarIcon: () => <TabBarIcon name="home" color={"#EB3030"} />,
           }}
